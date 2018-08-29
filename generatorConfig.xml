@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="context1">
+  
+  <!--取消注释  -->
+  <commentGenerator>
+  		<property name="suppressAllComments" value="true"/>
+  	</commentGenerator>
+    <jdbcConnection connectionURL="jdbc:mysql:///apartment" driverClass="com.mysql.jdbc.Driver" password="123456" userId="root" />
+    <!-- 生成pojo位置 -->
+    <javaModelGenerator targetPackage="com.practice2.dao.pojo" targetProject="Apartment/src/main/java" />
+   <!-- mapper生成位置 -->
+   <!--  <sqlMapGenerator targetPackage="mapper" targetProject="VideoWeb/src/main/resources" /> -->
+    <!-- targetPackage：mapper接口生成的位置 -->  
+    <javaClientGenerator targetPackage="com.practice2.dao" targetProject="Apartment/src/main/java" type="XMLMAPPER" />
+    <table tableName="house"></table>
+    <table tableName="lessee"></table>
+    <table tableName="rect"></table>
+  </context>
+</generatorConfiguration>
