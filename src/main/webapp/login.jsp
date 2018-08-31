@@ -9,6 +9,11 @@
 
 	<title>公寓管理系统 - 登录页面</title>
 	<link rel="stylesheet" href="./static/css/index.css">
+<style type="text/css">
+	.s1{
+	cursor: pointer;
+}
+</style>
 </head>
 <body>
 <div class="login">
@@ -17,9 +22,16 @@
 	<form action="login" method="post">
 	<div>
 		<input type="text" id="username" name="user_name" value="" placeholder="请输入用户名">
+		
 	</div>
 	<div>
 		<input type="password" id="password" name="user_password" value="" placeholder="请输入密码">
+			
+	</div>
+		<div>
+		<input name="vcode" placeholder="请输入验证码"/>
+		<span>${login_err}</span>
+		<img src="code" onclick="this.src='code?'+Math.random();"class="s1" title="点击更换">
 	</div>
 	<div>
 		<p class="error-message"></p>
@@ -30,14 +42,7 @@
  <c:if test="${msg != null }">
 			<script type="text/javascript">
 			alert('${msg}');
-			
 			</script>
-						
-			</c:if>
-<!-- <script>
-	if (window.top !== window) {
-		window.top.location.reload();
-	}
-</script> -->
+</c:if>
 </body>
 </html>

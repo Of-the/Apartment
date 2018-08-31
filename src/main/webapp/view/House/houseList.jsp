@@ -9,7 +9,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>XX系统 - 房屋信息管理</title>
+	<title>公寓管理系统 - 房屋信息管理</title>
+	<link rel="stylesheet" href="static/css/fenye.css">
 	<link rel="stylesheet" href="static/css/main.css">
 	<link rel="stylesheet" href="static/lib/font-awesome/css/font-awesome.css">
 </head>
@@ -20,6 +21,7 @@
 		<div>
 			<a class="btn btn-primary" href="view/House/houseAdd.jsp">添加信息</a>
 		</div>
+		<a href="view/House/test.jsp">搜索</a>>
 	</div>
 
 	<table class="list" border="1">
@@ -53,46 +55,25 @@
 			<td>${i.hIsdoubleair}</td>
 			<td>${i.hLimit}</td>
 			<td>${i.hPrice}</td>
-			<td>${i.hStatus}</td>
 			<td>
-				<a class="fa fa-info" title="详情" href="HouseDetailServlet?id=${i.hId}"></a>
-				&nbsp;&nbsp;
-				<a class="fa fa-pencil" title="编辑" href="HouseUpdateServlet?id=${i.hId}"></a>
-				&nbsp;&nbsp;
-				<a class="fa fa-remove" title="删除" href="HouseDeleteServlet?id=${i.hId}" onclick="deleteh(${i.hId})" id="a${i.hId}"></a>
+				<c:if test="${i.hStatus==1}">已出租</c:if>
+				<c:if test="${i.hStatus==2}">未出租</c:if>
+				<c:if test="${i.hStatus==3}">停止出租</c:if>
 			</td>
+			<td>
+				<a class="fa fa-info" title="详情" href="HouseDetailServlet.do?id=${i.hId}"></a>
+				&nbsp;&nbsp;
+				<a class="fa fa-pencil" title="编辑" href="HouseUpdateServlet.do?id=${i.hId}"></a>
+				&nbsp;&nbsp;
+			  <a class="fa fa-remove" title="删除" href="HouseDeleteServlet.do?id=${i.hId}" 
+			  onclick="return confirm('是否确认删除${i.gethId()}?');"></a>
+			 </td>
 		</tr>
 		</c:forEach>
 	</table>
-	<div class="pager-info">
-		<div>共有 ${count}条记录，第 ${current}/${count} 页 </div>
-		<div>
-			<ul class="pagination">
-				<li class="paginate_button previous disabled }">
-				<a href="#">上一页</a>
-				</li>
-				<li class="paginate_button active">
-				<a href="#">1</a>
-				</li>
-				<li class="paginate_button next disabled">
-				<a href="#">下一页</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-<script src="static/lib/jquery/jquery.js"></script>
-	<script type="text/javascript">
-		function deleteh(a) {
-			$.ajax({
-				url:"HouseDeleteServlet",
-				data:"id="+a,
-				success:function(){
-					alert("确定删除该信息吗？")
-					$("#a"+a).parent().parent().remove();
-				}
-			})
-		}			
-	</script>
+<script src="static/lib/jquery/jquery.js"></script>	
+<script src="static/jquery/jquery-1.11.1.js"></script>
+<script src="static/js/fenye.js"></script>
+
 </body>
 </html>

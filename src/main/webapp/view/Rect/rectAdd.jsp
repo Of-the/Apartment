@@ -1,15 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+            <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- <base href="http://localhost:8080/Apartment/"> -->
-<title>房租信息管理</title>
+
+	<title>公寓管理系统 - 房租信息添加</title>
+	<link rel="stylesheet" href="/Apartment/static/css/main.css">
+	<link rel="stylesheet" href="/Apartment/static/lib/font-awesome/css/font-awesome.css">
 </head>
 <body>
+<div class="box">
+<h3>添加房租信息</h3>
 <form action="RectAddServlet">
-		<h2>添加租户信息</h2>
 			<table class="table-bordered">
 			<tr>
 			<td>序号</td>
@@ -17,11 +21,21 @@
 			</tr>
 			<tr>
 			<td>房屋信息</td>
-			<td><input type="text" name="h_id" placeholder="房屋信息"></td>
+			<!-- <td><input type="text" name="h_id" placeholder="房屋信息"></td> -->
+			<td><select name="h_id">
+			<c:forEach var="i" items="${house}" >
+			<option value="${i.hId}">${i.hArea}</option>
+			</c:forEach>
+			</select></td>
 			</tr>
 			<tr>
 			<td>租户信息</td>
-			<td><input type="text" name="l_id" placeholder="租户信息"></td>
+			<!-- <td><input type="text" name="l_id" placeholder="租户信息"></td> -->
+			<td><select name="l_id">
+			<c:forEach var="i" items="${lessee}" >
+			<option value="${i.lId}">${i.lName}</option>
+			</c:forEach>
+			</select></td>
 			</tr>
 			<tr>
 			<td>缴纳金额</td>

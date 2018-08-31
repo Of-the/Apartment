@@ -11,7 +11,7 @@ public class LesseeDaoImpl implements LesseeDao{
 
 	public void add(Lessee e) {
 		String sql="INSERT INTO lessee VALUES(?,?,?,?,?,?,?)";
-		JDBCUtil.daDMLWithSQL(sql,e.getlId(),e.getlName(),e.getlTel(),e.getlSex(),e.getlNativeplace(),e.getlIdcard(),e.getlAddtime() );
+		JDBCUtil.daDMLWithSQL(sql,null,e.getlName(),e.getlTel(),e.getlSex(),e.getlNativeplace(),e.getlIdcard(),e.getlAddtime() );
 	}
 
 	public void deleteByID(int id) {
@@ -29,19 +29,10 @@ public class LesseeDaoImpl implements LesseeDao{
 		return JDBCUtil.dbDQLWithSQL(sql, Lessee.class);
 	}
 
-	public int sum() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public List<Lessee> selectAllByPage(int page, int count) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public Lessee updateByID(int id) {
 		String sql="select * from Lessee where l_id=?";
-		return JDBCUtil.dbDQLWithSQL(sql, Lessee.class, id).get(0);
+		return (Lessee) JDBCUtil.dbDQLWithSQL(sql, Lessee.class, id);
 	}
 
 

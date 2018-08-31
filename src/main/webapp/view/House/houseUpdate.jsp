@@ -1,6 +1,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,13 +14,13 @@
 <body>
 <div class="box">
 	<h3>修改房屋信息</h3>
-<form action="HouseEditServlet">
+<form action="/Apartment/HouseEditServlet.do">
 		<h2>修改</h2>
 			<table class="form-table">
 			<tr>
 			<td>序号</td>
 			<td colspan="3" class="control">
-			<input type="text" name="h_id"  placeholder="${house.hId}">
+			<input type="text" name="h_id" value="${house.hId}" readonly="readonly"  placeholder="${house.hId}">
 			</td>
 			</tr> 
 			<tr>
@@ -65,7 +66,11 @@
 			<tr>
 			<td >是否双气</td>
 			<td colspan="3" class="control">
-			<input type="text" name="h_isDoubleAir" placeholder="${house.hIsdoubleair}"></td>
+			<%-- <input type="text" name="h_isDoubleAir" placeholder="${house.hIsdoubleair}"></td> --%>
+			<select name="h_isDoubleAir" value="${house.hIsdoubleair}">
+					<option value="1">是</option>
+					<option value="0">否</option>
+				</select>
 			</tr>
 			<tr>
 			<td>限住人数</td>
@@ -80,8 +85,36 @@
 			<tr>
 			<td >出租状态</td>
 			<td colspan="3" class="control">
-			<input type="text" name="h_status" placeholder="${house.hStatus}"></td>
+			<%-- <input type="text" name="h_status" placeholder="${house.hStatus}"></td> --%>
+			<select name="h_status" value="${house.hStatus}">
+					<option value="1">已出租</option>
+					<option value="2">未出租</option>
+					<option value="3">停止状态</option>
+				</select>
 			</tr>
+				<tr>
+			<td>房屋图片</td>
+			<td colspan="3" class="control">
+				<input type="file" name="h_img" value="${house.hImg}" placeholder="${house.hImg}">
+			</td>
+		</tr>
+		<tr>
+			<td>完整地址信息</td>
+			<td colspan="3" class="control">
+				<input type="text" name="h_address" value="${house.hAddress}" placeholder="${house.hAddress}">
+			</td>
+		</tr>
+			<tr>
+			<td>添加时间</td>
+			<td colspan="3" class="control">
+			<input type="date" name="h_addtime" placeholder="${house.hAddtime}"></td>
+			</tr>
+			<tr>
+			<td>修改时间</td>
+			<td colspan="3" class="control">
+			<input type="date" name="h_updatetime" placeholder="${house.hUpdatetime}"></td>
+			</tr>
+			<tr>
 			</table>	
 			<div class="buttons">
 		<input class="btn btn-primary va-bottom" type="submit" value="保存">&nbsp;&nbsp;

@@ -16,6 +16,14 @@ public class Contract {
 	private Integer cPeriods;
 	private String cPeople;
 	private Integer cStatus;
+	private House house;
+	
+	public House getHouse() {
+		return house;
+	}
+	public void setHouse(House house) {
+		this.house = house;
+	}
 	public Integer getcId() {
 		return cId;
 	}
@@ -99,7 +107,8 @@ public class Contract {
 		return "Contract [cId=" + cId + ", cNumber=" + cNumber + ", hId=" + hId + ", lId=" + lId + ", cTime=" + cTime
 				+ ", cStarttime=" + cStarttime + ", cEndtime=" + cEndtime + ", cMoney=" + cMoney + ", cPay=" + cPay
 				+ ", cDeposit=" + cDeposit + ", cPeriods=" + cPeriods + ", cPeople=" + cPeople + ", cStatus=" + cStatus
-				+ "]";
+				+ ", house=" + house + "]";
 	}
+
 	
 }

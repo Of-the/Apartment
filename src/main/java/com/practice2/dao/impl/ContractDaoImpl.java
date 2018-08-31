@@ -4,13 +4,14 @@ import java.util.List;
 
 import com.practice2.dao.ContractDao;
 import com.practice2.pojo.Contract;
+import com.practice2.pojo.House;
 import com.practice2.util.JDBCUtil;
 
 public class ContractDaoImpl implements ContractDao{
 
 	public void add(Contract e) {
-		String sql=" insert into Contract values(null,?,?,?,?,?,?,?,?,?,?,?)";
-		JDBCUtil.daDMLWithSQL(sql, e.getcNumber(),e.gethId(),e.getlId(),e.getcTime(),e.getcStarttime(),e.getcEndtime(),e.getcMoney(),e.getcPay(),e.getcDeposit(),e.getcPeriods(),e.getcPeople(),e.getcStatus());
+		String sql=" insert into Contract values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		JDBCUtil.daDMLWithSQL(sql, null,e.getcNumber(),e.gethId(),e.getlId(),e.getcTime(),e.getcStarttime(),e.getcEndtime(),e.getcMoney(),e.getcPay(),e.getcDeposit(),e.getcPeriods(),e.getcPeople(),e.getcStatus());
 	}
 
 	public void deleteByID(int id) {
@@ -24,23 +25,15 @@ public class ContractDaoImpl implements ContractDao{
 	}
 
 	public List<Contract> selectAll() {
-		String sql="select * from Contract";
+		String sql="select * from Contract ";
 		return JDBCUtil.dbDQLWithSQL(sql, Contract.class);
 	}
 
 	public Contract updateByID(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql="select * from Contract where c_id=?";
+		return JDBCUtil.dbDQLWithSQL(sql, Contract.class, id).get(0);
 	}
 
-	public int sum() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
-	public List<Contract> selectAllByPage(int page, int count) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>公寓管理系统 - 房租信息管理</title>
+	<link rel="stylesheet" href="static/css/fenye.css">
 	<link rel="stylesheet" href="static/css/main.css">
 	<link rel="stylesheet" href="static/lib/font-awesome/css/font-awesome.css">
 </head>
@@ -31,38 +32,26 @@
 		<c:forEach var="i" items="${rect}">	
 		<tr>
 			<td>${i.rId}</td>
-			<td>${i.hId}</td>
-			<td>${i.lId}</td>
+			<td><a href="HouseDetailServlet.do?id=${i.hId}">${i.hId}房屋信息</a></td>
+			<td><a href="LesseeDetailServlet.do?id=${i.lId}">${i.lId}租户信息</a></td>
 			<td>${i.rMoney}</td>
 			<td>${i.rTime}</td>
 			<td>${i.rRemark}</td>
 			<td>
-				<a class="fa fa-info" title="详情" href="#"></a>
+				<a class="fa fa-info" title="详情" href="RectDetailServlet.do?id=${i.rId}"></a>
 				&nbsp;&nbsp;
-				<a class="fa fa-pencil" title="编辑" href="LesseeUpdateServlet?id=${i.lId}"></a>
+				<a class="fa fa-pencil" title="编辑" href="RectUpdateServlet.do?id=${i.rId}"></a>
 				&nbsp;&nbsp;
-				<a class="fa fa-remove" title="删除" href="LesseeDeleteServlet?id=${i.lId}" onclick="deleteh(${i.lId})" id="a${i.lId}"></a>
+				<a class="fa fa-remove" title="删除" href="RectDeleteServlet.do?id=${i.rId}"
+				 onclick="return confirm('是否确认删除${i.getrId()}?');"></a>
 			
 			</td>
 		</tr>
 		</c:forEach>
 	</table>
-	<div class="pager-info">
-		<div>共有 1 条记录，第 1/1 页 </div>
-		<div>
-			<ul class="pagination">
-				<li class="paginate_button previous disabled }">
-				<a href="#">上一页</a>
-				</li>
-				<li class="paginate_button active"><a href="#">1</a></li>
-				<li class="paginate_button next disabled">
-				<a href="#">下一页</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-<script src="static/lib/jquery/jquery.js"></script>
+
+<script src="static/jquery/jquery-1.11.1.js"></script>
+<script src="static/js/fenye.js"></script>
 <script src="static/lib/jquery/jquery.js"></script>
 	<script type="text/javascript">
 		function deleteh(a) {

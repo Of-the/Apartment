@@ -1,7 +1,6 @@
 package com.practice2.pojo;
 
 import java.sql.Date;
-import java.sql.Timestamp;
 
 public class House {
 	private Integer hId;
@@ -118,7 +117,21 @@ public class House {
 	public void sethAddress(String hAddress) {
 		this.hAddress = hAddress;
 	}
-
+	public Date gethAddtime() {
+		return hAddtime;
+	}
+	public void sethAddtime(Date hAddtime) {
+		this.hAddtime = hAddtime;
+	}
+	public Date gethUpdatetime() {
+		return hUpdatetime;
+	}
+	public void sethUpdatetime(Date hUpdatetime) {
+		this.hUpdatetime = hUpdatetime;
+	}
+	public House() {
+		super();
+	}
 	public House(Integer hId, String hArea, String hEstate, String hUnitnumber, Integer hFloor, String hRoomno,
 			String hAcreage, String hDirection, String hFitment, Boolean hIsdoubleair, Integer hLimit, String hFacility,
 			Double hPrice, Integer hStatus, String hImg, String hAddress, Date hAddtime, Date hUpdatetime) {
@@ -142,20 +155,14 @@ public class House {
 		this.hAddtime = hAddtime;
 		this.hUpdatetime = hUpdatetime;
 	}
-	public Date gethAddtime() {
-		return hAddtime;
+	@Override
+	public String toString() {
+		return "House [hId=" + hId + ", hArea=" + hArea + ", hEstate=" + hEstate + ", hUnitnumber=" + hUnitnumber
+				+ ", hFloor=" + hFloor + ", hRoomno=" + hRoomno + ", hAcreage=" + hAcreage + ", hDirection="
+				+ hDirection + ", hFitment=" + hFitment + ", hIsdoubleair=" + hIsdoubleair + ", hLimit=" + hLimit
+				+ ", hFacility=" + hFacility + ", hPrice=" + hPrice + ", hStatus=" + hStatus + ", hImg=" + hImg
+				+ ", hAddress=" + hAddress + ", hAddtime=" + hAddtime + ", hUpdatetime=" + hUpdatetime + "\n]";
 	}
-	public void sethAddtime(Date hAddtime) {
-		this.hAddtime = hAddtime;
-	}
-	public Date gethUpdatetime() {
-		return hUpdatetime;
-	}
-	public void sethUpdatetime(Date hUpdatetime) {
-		this.hUpdatetime = hUpdatetime;
-	}
-	public House() {
-		super();
-	}
+
 	
 }

@@ -20,7 +20,7 @@
 			<tr>
 			<td>租客号</td>
 			<td colspan="3" class="control">
-			<input type="text" name="l_id" placeholder="${lessee.lId}">
+			<input type="text" name="l_id" placeholder="${lessee.lId}" readonly="readonly">
 			</td>
 			</tr> 
 			<tr>

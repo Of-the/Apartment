@@ -10,7 +10,4 @@ public interface BaseDao<E> {
 	public void update(E e);
 	public List<E>selectAll();
 	public E updateByID(int id) ;
-	public int sum();
-	public List<E> selectAllByPage(int page, int count);
-	
 }

@@ -7,7 +7,7 @@ public class Lessee {
 	private Integer lId;
 	private String lName;
 	private String lTel;
-	private Character lSex;
+	private String lSex;
 	private String lNativeplace;
 	private String lIdcard;
 	private Date lAddtime;
@@ -36,12 +36,19 @@ public class Lessee {
 	public void setlIdcard(String lIdcard) {
 		this.lIdcard = lIdcard;
 	}
-	public Character getlSex() {
+	
+public String getlSex() {
 		return lSex;
 	}
-	public void setlSex(Character lSex) {
+	public void setlSex(String lSex) {
 		this.lSex = lSex;
 	}
+	//	public Character getlSex() {
+//		return lSex;
+//	}
+//	public void setlSex(Character lSex) {
+//		this.lSex = lSex;
+//	}
 	public String getlNativeplace() {
 		return lNativeplace;
 	}
@@ -57,7 +64,7 @@ public class Lessee {
 	public Lessee() {
 		super();
 	}
-	public Lessee(Integer lId, String lName, String lTel, Character lSex, String lNativeplace, String lIdcard,
+	public Lessee(Integer lId, String lName, String lTel, String lSex, String lNativeplace, String lIdcard,
 			Date lAddtime) {
 		super();
 		this.lId = lId;

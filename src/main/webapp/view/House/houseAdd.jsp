@@ -12,15 +12,15 @@
 <body>
 <div class="box">
 	<h3>添加房屋信息</h3>
-<form action="HouseAddServlet">
+<form action="/Apartment/HouseAddServlet.do">
 		<h2>添加</h2>
 			<table class="form-table">
-			<tr>
+			<!--  <tr>
 			<td>序号</td>
 			<td colspan="3" class="control">
 			<input type="text" name="h_id" placeholder="填写序号">
 			</td>
-			</tr> 
+			</tr>   -->
 			<tr>
 			<td>所属地区</td>
 			<td colspan="3" class="control">
@@ -57,7 +57,14 @@
 			</tr>
 			<tr>
 			<td >是否双气</td>
-			<td colspan="3" class="control"><input type="text" name="h_isDoubleAir" placeholder="是否双气"></td>
+			<td colspan="3" class="control">
+			<!-- <input type="text" name="h_isDoubleAir" placeholder="是否双气"> -->
+			<select name="h_isDoubleAir" value="h_isDoubleAir">
+					<option value="1">是</option>
+					<option value="0">否</option>
+				
+				</select>
+			</td>
 			</tr>
 			<tr>
 			<td>限住人数</td>
@@ -71,17 +78,17 @@
 			<td >出租状态</td>
 			<td colspan="3" class="control">
 			<!-- <input type="text" name="h_status" placeholder="出租状态"> -->
-			<select>
-					<option>出租状态</option>
-					<option>已出租</option>
-					<option>未出租</option>
+			<select name="h_status" value="h_status">
+					<option value="1">已出租</option>
+					<option value="2">未出租</option>
+					<option value="3">停止状态</option>
 				</select>
 			</td>
 			</tr>
 			<tr>
 			<td>房屋图片</td>
 			<td colspan="3" class="control">
-				<input type="file" name="h_img" placeholder="">
+				<input type="file" name="h_img"  placeholder="">
 			</td>
 		</tr>
 		<tr>
@@ -90,13 +97,18 @@
 				<input type="text" name="h_address" placeholder="完整地址信息">
 			</td>
 		</tr>
-
-		<!-- <tr>
-			<td>备注说明</td>
+<tr>
+			<td>添加时间</td>
 			<td colspan="3" class="control">
-				<textarea class="p100" name="" placeholder="备注说明信息"></textarea>
+				<input type="date" name="h_addtime" placeholder="添加时间">
 			</td>
-		</tr> -->
+		</tr>
+		<tr>
+			<td>更新时间</td>
+			<td colspan="3" class="control">
+				<input type="date" name="h_updatetime" placeholder="更新时间">
+			</td>
+		</tr>
 			</table>	
 			<div class="buttons">
 		<input class="btn btn-primary va-bottom" type="submit" value="保存">&nbsp;&nbsp;

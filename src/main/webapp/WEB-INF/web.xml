@@ -7,218 +7,293 @@
   </welcome-file-list>
   <servlet>
     <servlet-name>loginServlet</servlet-name>
-    <servlet-class>com.practice2.user.servlet.UserLoginServlet</servlet-class>
+    <servlet-class>com.practice2.servlet.UserLoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>loginServlet</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>HouseAddServlet</servlet-name>
-    <servlet-class>com.practice2.house.servlet.HouseAddServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HouseAddServlet</servlet-name>
-    <url-pattern>/HouseAddServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>HouseShowServlet</display-name>
     <servlet-name>HouseShowServlet</servlet-name>
-    <servlet-class>com.practice2.house.servlet.HouseShowServlet</servlet-class>
+    <servlet-class>com.practice2.servlet.HouseShowServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HouseShowServlet</servlet-name>
-    <url-pattern>/HouseShowServlet</url-pattern>
+    <url-pattern>/HouseShowServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HouseShowServlet</servlet-name>
+    <url-pattern>/HouseAddServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HouseShowServlet</servlet-name>
+    <url-pattern>/HouseDeleteServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HouseShowServlet</servlet-name>
+    <url-pattern>/HouseDetailServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HouseShowServlet</servlet-name>
+    <url-pattern>/HouseEditServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HouseShowServlet</servlet-name>
+    <url-pattern>/HouseUpdateServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HouseShowServlet</servlet-name>
+    <url-pattern>/HouseSearchServlet.do</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>HouseUpdateServlet</display-name>
-    <servlet-name>HouseUpdateServlet</servlet-name>
-    <servlet-class>com.practice2.house.servlet.HouseUpdateServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HouseUpdateServlet</servlet-name>
-    <url-pattern>/HouseUpdateServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>HouseDeleteServlet</display-name>
-    <servlet-name>HouseDeleteServlet</servlet-name>
-    <servlet-class>com.practice2.house.servlet.HouseDeleteServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HouseDeleteServlet</servlet-name>
-    <url-pattern>/HouseDeleteServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>HouseEditServlet</display-name>
-    <servlet-name>HouseEditServlet</servlet-name>
-    <servlet-class>com.practice2.house.servlet.HouseEditServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HouseEditServlet</servlet-name>
-    <url-pattern>/HouseEditServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>RectShowServlet</display-name>
-    <servlet-name>RectShowServlet</servlet-name>
-    <servlet-class>com.practice2.rect.servlet.RectShowServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RectShowServlet</servlet-name>
-    <url-pattern>/RectShowServlet</url-pattern>
-  </servlet-mapping>
-<!--   <servlet>
-    <description></description>
-    <display-name>SafeServlet</display-name>
-    <servlet-name>SafeServlet</servlet-name>
-    <servlet-class>SafeServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>SafeServlet</servlet-name>
-    <url-pattern>/SafeServlet</url-pattern>
-  </servlet-mapping> -->
-  <servlet>
-    <description></description>
-    <display-name>LesseeShowServlet</display-name>
     <servlet-name>LesseeShowServlet</servlet-name>
-    <servlet-class>com.practice2.lessee.servlet.LesseeShowServlet</servlet-class>
+    <servlet-class>com.practice2.servlet.LesseeShowServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LesseeShowServlet</servlet-name>
-    <url-pattern>/LesseeShowServlet</url-pattern>
+    <url-pattern>/LesseeShowServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LesseeShowServlet</servlet-name>
+    <url-pattern>/LesseeAddServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LesseeShowServlet</servlet-name>
+    <url-pattern>/LesseeDeleteServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LesseeShowServlet</servlet-name>
+    <url-pattern>/LesseeDetailServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LesseeShowServlet</servlet-name>
+    <url-pattern>/LesseeEditServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LesseeShowServlet</servlet-name>
+    <url-pattern>/LesseeUpdateServlet.do</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>LesseeAddServlet</display-name>
-    <servlet-name>LesseeAddServlet</servlet-name>
-    <servlet-class>com.practice2.lessee.servlet.LesseeAddServlet</servlet-class>
+    <servlet-name>LogisticalShowServlet</servlet-name>
+    <servlet-class>com.practice2.servlet.LogisticalShowServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LesseeAddServlet</servlet-name>
-    <url-pattern>/LesseeAddServlet</url-pattern>
+    <servlet-name>LogisticalShowServlet</servlet-name>
+    <url-pattern>/LogisticalShowServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogisticalShowServlet</servlet-name>
+    <url-pattern>/LogisticalAddServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogisticalShowServlet</servlet-name>
+    <url-pattern>/LogisticalDeleteServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogisticalShowServlet</servlet-name>
+    <url-pattern>/LogisticalDetailServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogisticalShowServlet</servlet-name>
+    <url-pattern>/LogisticalEditServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogisticalShowServlet</servlet-name>
+    <url-pattern>/LogisticalUpdateServlet.do</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>LesseeDeleteServlet</display-name>
-    <servlet-name>LesseeDeleteServlet</servlet-name>
-    <servlet-class>com.practice2.lessee.servlet.LesseeDeleteServlet</servlet-class>
+    <servlet-name>RectShowServlet</servlet-name>
+    <servlet-class>com.practice2.servlet.RectShowServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LesseeDeleteServlet</servlet-name>
-    <url-pattern>/LesseeDeleteServlet</url-pattern>
+    <servlet-name>RectShowServlet</servlet-name>
+    <url-pattern>/RectShowServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RectShowServlet</servlet-name>
+    <url-pattern>/RectAddServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RectShowServlet</servlet-name>
+    <url-pattern>/RectDeleteServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RectShowServlet</servlet-name>
+    <url-pattern>/RectDetailServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RectShowServlet</servlet-name>
+    <url-pattern>/RectEditServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RectShowServlet</servlet-name>
+    <url-pattern>/RectUpdateServlet.do</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>LesseeEditServlet</display-name>
-    <servlet-name>LesseeEditServlet</servlet-name>
-    <servlet-class>com.practice2.lessee.servlet.LesseeEditServlet</servlet-class>
+    <servlet-name>RepairShowServlet</servlet-name>
+    <servlet-class>com.practice2.servlet.RepairShowServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LesseeEditServlet</servlet-name>
-    <url-pattern>/LesseeEditServlet</url-pattern>
+    <servlet-name>RepairShowServlet</servlet-name>
+    <url-pattern>/RepairShowServlet.do</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>LesseeUpdateServlet</display-name>
-    <servlet-name>LesseeUpdateServlet</servlet-name>
-    <servlet-class>com.practice2.lessee.servlet.LesseeUpdateServlet</servlet-class>
-  </servlet>
   <servlet-mapping>
-    <servlet-name>LesseeUpdateServlet</servlet-name>
-    <url-pattern>/LesseeUpdateServlet</url-pattern>
+    <servlet-name>RepairShowServlet</servlet-name>
+    <url-pattern>/RepairAddServlet.do</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>RectAddServlet</display-name>
-    <servlet-name>RectAddServlet</servlet-name>
-    <servlet-class>com.practice2.rect.servlet.RectAddServlet</servlet-class>
-  </servlet>
   <servlet-mapping>
-    <servlet-name>RectAddServlet</servlet-name>
-    <url-pattern>/RectAddServlet</url-pattern>
+    <servlet-name>RepairShowServlet</servlet-name>
+    <url-pattern>/RepairDeleteServlet.do</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>RectDeleteServlet</display-name>
-    <servlet-name>RectDeleteServlet</servlet-name>
-    <servlet-class>com.practice2.rect.servlet.RectDeleteServlet</servlet-class>
-  </servlet>
   <servlet-mapping>
-    <servlet-name>RectDeleteServlet</servlet-name>
-    <url-pattern>/RectDeleteServlet</url-pattern>
+    <servlet-name>RepairShowServlet</servlet-name>
+    <url-pattern>/RepairDetailServlet.do</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>AdddCookieServlet</display-name>
-    <servlet-name>AdddCookieServlet</servlet-name>
-    <servlet-class>com.practice3.AdddCookieServlet</servlet-class>
-  </servlet>
   <servlet-mapping>
-    <servlet-name>AdddCookieServlet</servlet-name>
-    <url-pattern>/AdddCookieServlet</url-pattern>
+    <servlet-name>RepairShowServlet</servlet-name>
+    <url-pattern>/RepairEditServlet.do</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>HouseDetailServlet</display-name>
-    <servlet-name>HouseDetailServlet</servlet-name>
-    <servlet-class>com.practice2.house.servlet.HouseDetailServlet</servlet-class>
-  </servlet>
   <servlet-mapping>
-    <servlet-name>HouseDetailServlet</servlet-name>
-    <url-pattern>/HouseDetailServlet</url-pattern>
+    <servlet-name>RepairShowServlet</servlet-name>
+    <url-pattern>/RepairUpdateServlet.do</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>ContractShowServlet</display-name>
     <servlet-name>ContractShowServlet</servlet-name>
-    <servlet-class>com.practice2.contract.servlet.ContractShowServlet</servlet-class>
+    <servlet-class>com.practice2.servlet.ContractShowServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ContractShowServlet</servlet-name>
-    <url-pattern>/ContractShowServlet</url-pattern>
+    <url-pattern>/ContractShowServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContractShowServlet</servlet-name>
+    <url-pattern>/ContractAddServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContractShowServlet</servlet-name>
+    <url-pattern>/ContractDeleteServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContractShowServlet</servlet-name>
+    <url-pattern>/ContractDetailServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContractShowServlet</servlet-name>
+    <url-pattern>/ContractEditServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContractShowServlet</servlet-name>
+    <url-pattern>/ContractUpdateServlet.do</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>ContractShowServlet</servlet-name>
+    <url-pattern>/AddFroKey.do</url-pattern>
+  </servlet-mapping>
+
+  
+  <servlet>
+    <description></description>
+    <display-name>UserShowServlet</display-name>
+    <servlet-name>UserShowServlet</servlet-name>
+    <servlet-class>com.practice2.servlet.UserShowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserShowServlet</servlet-name>
+    <url-pattern>/UserShowServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserShowServlet</servlet-name>
+    <url-pattern>/UserAddServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserShowServlet</servlet-name>
+    <url-pattern>/UserDeleteServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserShowServlet</servlet-name>
+    <url-pattern>/UserDetailServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserShowServlet</servlet-name>
+    <url-pattern>/UserEditServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserShowServlet</servlet-name>
+    <url-pattern>/UserUpdateServlet.do</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>ContractAddServlet</display-name>
-    <servlet-name>ContractAddServlet</servlet-name>
-    <servlet-class>com.practice2.contract.servlet.ContractAddServlet</servlet-class>
+    <display-name>ActivityShowServlet</display-name>
+    <servlet-name>ActivityShowServlet</servlet-name>
+    <servlet-class>com.practice2.servlet.ActivityShowServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ContractAddServlet</servlet-name>
-    <url-pattern>/ContractAddServlet</url-pattern>
+    <servlet-name>ActivityShowServlet</servlet-name>
+    <url-pattern>/ActivityShowServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ActivityShowServlet</servlet-name>
+    <url-pattern>/ActivityAddServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ActivityShowServlet</servlet-name>
+    <url-pattern>/ActivityDeleteServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ActivityShowServlet</servlet-name>
+    <url-pattern>/ActivityDetailServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ActivityShowServlet</servlet-name>
+    <url-pattern>/ActivityEditServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ActivityShowServlet</servlet-name>
+    <url-pattern>/ActivityUpdateServlet.do</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>ContractUpdateServlet</display-name>
-    <servlet-name>ContractUpdateServlet</servlet-name>
-    <servlet-class>com.practice2.contract.servlet.ContractUpdateServlet</servlet-class>
+    <display-name>ValidateCode</display-name>
+    <servlet-name>ValidateCode</servlet-name>
+    <servlet-class>com.practice2.util.ValidateCode</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ContractUpdateServlet</servlet-name>
-    <url-pattern>/ContractUpdateServlet</url-pattern>
+    <servlet-name>ValidateCode</servlet-name>
+    <url-pattern>/code</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>ContractDeleteServlet</display-name>
-    <servlet-name>ContractDeleteServlet</servlet-name>
-    <servlet-class>com.practice2.contract.servlet.ContractDeleteServlet</servlet-class>
+    <display-name>RoleShowServlet</display-name>
+    <servlet-name>RoleShowServlet</servlet-name>
+    <servlet-class>com.practice2.servlet.RoleShowServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ContractDeleteServlet</servlet-name>
-    <url-pattern>/ContractDeleteServlet</url-pattern>
+    <servlet-name>RoleShowServlet</servlet-name>
+    <url-pattern>/RoleShowServlet.do</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>ContractEditServlet</display-name>
-    <servlet-name>ContractEditServlet</servlet-name>
-    <servlet-class>com.practice2.contract.servlet.ContractEditServlet</servlet-class>
-  </servlet>
   <servlet-mapping>
-    <servlet-name>ContractEditServlet</servlet-name>
-    <url-pattern>/ContractEditServlet</url-pattern>
+    <servlet-name>RoleShowServlet</servlet-name>
+    <url-pattern>/RoleAddServlet.do</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RoleShowServlet</servlet-name>
+    <url-pattern>/RoleDeleteServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RoleShowServlet</servlet-name>
+    <url-pattern>/RoleEditServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RoleShowServlet</servlet-name>
+    <url-pattern>/RoleDetailServlet.do</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>LoginFilter</display-name>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.practice2.servlet.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/LoginFilter</url-pattern>
+  </filter-mapping>
 </web-app>

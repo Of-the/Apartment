@@ -12,8 +12,14 @@
 <body>
 <div class="box">
 	<h3>房屋信息详情</h3>
-	<form action="HouseDetailServlet" method="post">
+	<form action="HouseShowServlet.do" method="post">
 		<table class="form-table">
+			<tr>
+				<td class="label">序号</td>
+				<td class="detail">
+					${house.hId}
+				</td>
+			</tr>
 			<tr>
 				<td class="label">地区</td>
 				<td class="detail">
@@ -95,7 +101,7 @@
 			<tr>
 				<td class="label">房屋图片</td>
 				<td colspan="3" class="detail">
-					<img src="../../../image/image.png" width="300px" height="200px">
+					<img src="${house.hImg}" width="300px" height="200px" >
 				</td>
 			</tr>
 			<tr>
