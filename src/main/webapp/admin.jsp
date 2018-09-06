@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,11 +74,13 @@
 
 			</ul>
 		</li>
+		<c:if test='${user.userName =="admin"}'>
 		<li class="menu-title">
 			<a href="#" >
 				<i class=" fa fa-sitemap"></i>&nbsp;&nbsp;管理员
 			</a>
 		</li>
+			</c:if>
 		<li class="sub-menu">
 			<ul class="menu">
 				<li>
@@ -92,6 +95,7 @@
 				</li>
 			</ul>
 		</li>
+	
 	</ul>
 	<div class="right-side">
 		<iframe name="pageBox" src="HouseShowServlet.do"></iframe>

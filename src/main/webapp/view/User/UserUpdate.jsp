@@ -13,25 +13,25 @@
 <body>
 <div class="box">
 	<h3>修改用户信息</h3>
-<form action="userUpdateServlet.do">
+<form action="/Apartment/UserEditServlet.do">
 	<h2>修改</h2>
 	<table class="form-table">
 	<tr>
 	<td>员工编号</td>
-	<td><input type="text" value="${user.userId}" name="user_id"></td></tr>
+	<td><input type="text" value="${user.userId}" readonly="readonly" name="user_id"></td></tr>
 	<tr>
 	<td>姓名</td>
-	<td><input type="text" value="${user.userName}" name="user_name"></td></tr>
+	<td><input type="text"  placeholder="${user.userName}" name="user_name"></td></tr>
 	<tr>
 	<td>密码</td>
-	<td><input type="text" value="${user.userPassword}" name="user_password"></td></tr>
+	<td><input type="text"  placeholder="${user.userPassword}"  name="user_password"></td></tr>
 	<tr>
 	<td>手机号码</td>
-	<td><input type="text" value="${user.userPhone}" name="user_phone"></td></tr>
-	</tr>
+	<td><input type="text"    placeholder="${user.userPhone}" name="user_phone"></td></tr>
+	</tr>  
 	<tr>
 	<td>住址</td>
-	<td><input type="text" value="${user.userAddress}" name="user_address"></td>
+	<td><input type="text" placeholder="${user.userAddress}" name="user_address"></td>
 		</table>	
 			<div class="buttons">
 		<input class="btn btn-primary va-bottom" type="submit" value="保存">&nbsp;&nbsp;

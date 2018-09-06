@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="static/lib/font-awesome/css/font-awesome.css">
 </head>
 <body>
+
 <div class="box">
 	<h3>房屋信息管理</h3>
 	<div class="actions">
@@ -41,6 +42,7 @@
 			<th>出租状态</th>
 			<th>操作</th>
 		</tr>
+		<tbody id="tbody">
 		<c:forEach var="i" items="${house}">	
 		<tr>
 			<td>${i.hId}</td>
@@ -63,13 +65,16 @@
 			<td>
 				<a class="fa fa-info" title="详情" href="HouseDetailServlet.do?id=${i.hId}"></a>
 				&nbsp;&nbsp;
+				<c:if test='${user.userName =="admin"}'>
 				<a class="fa fa-pencil" title="编辑" href="HouseUpdateServlet.do?id=${i.hId}"></a>
 				&nbsp;&nbsp;
 			  <a class="fa fa-remove" title="删除" href="HouseDeleteServlet.do?id=${i.hId}" 
 			  onclick="return confirm('是否确认删除${i.gethId()}?');"></a>
+			  </c:if>
 			 </td>
 		</tr>
 		</c:forEach>
+		</tbody>
 	</table>
 <script src="static/lib/jquery/jquery.js"></script>	
 <script src="static/jquery/jquery-1.11.1.js"></script>

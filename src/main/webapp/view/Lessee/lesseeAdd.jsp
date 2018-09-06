@@ -15,12 +15,12 @@
 <form action="/Apartment/LesseeAddServlet.do">
 		<h2>添加</h2>
 			<table class="form-table">
-			 <tr>
+		<!-- 	 <tr>
 			<td>租客号</td>
 			<td colspan="3" class="control">
 			<input type="text" name="l_id" placeholder="租客号">
 			</td>
-			</tr>  
+			</tr>   -->
 			<tr>
 			<td>租客姓名</td>
 			<td colspan="3" class="control">
@@ -35,8 +35,8 @@
 			<td>性别</td>
 			<td colspan="3" class="control">
 		 	<select name="l_sex">
-					<option value="M">男</option>
-					<option value="F">女</option>
+					<option value="男">男</option>
+					<option value="女">女</option>
 				</select> 
 <!-- 			 <input type="text" name="l_sex" placeholder="性别"></td> 
  -->			</tr>

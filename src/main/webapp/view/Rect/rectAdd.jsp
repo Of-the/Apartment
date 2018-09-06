@@ -13,18 +13,18 @@
 <body>
 <div class="box">
 <h3>添加房租信息</h3>
-<form action="RectAddServlet">
+<form action="/Apartment/RectAddServlet.do">
 			<table class="table-bordered">
-			<tr>
+			<!-- <tr>
 			<td>序号</td>
-			<td><input type="text" name="r_id"  placeholder="序号"></td>
-			</tr>
+			<td><input type="text" name="r_id" value="r_id" placeholder="序号"></td>
+			</tr> -->
 			<tr>
 			<td>房屋信息</td>
 			<!-- <td><input type="text" name="h_id" placeholder="房屋信息"></td> -->
 			<td><select name="h_id">
 			<c:forEach var="i" items="${house}" >
-			<option value="${i.hId}">${i.hArea}</option>
+			<option value="${i.hId}" selected="selected"> ${i.hArea}</option>
 			</c:forEach>
 			</select></td>
 			</tr>
@@ -33,7 +33,7 @@
 			<!-- <td><input type="text" name="l_id" placeholder="租户信息"></td> -->
 			<td><select name="l_id">
 			<c:forEach var="i" items="${lessee}" >
-			<option value="${i.lId}">${i.lName}</option>
+			<option value="${i.lId}" selected="selected"> ${i.lName}</option>
 			</c:forEach>
 			</select></td>
 			</tr>
@@ -43,7 +43,7 @@
 			</tr>
 			<tr>
 			<td>缴纳时间</td>
-			<td><input type="text" name="r_time" placeholder="缴纳时间"></td>
+			<td><input type="date" name="r_time" placeholder="缴纳时间"></td>
 			</tr>
 			<tr>
 			<td>备注</td>

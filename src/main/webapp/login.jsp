@@ -29,17 +29,17 @@
 			
 	</div>
 		<div>
-		<input name="vcode" placeholder="请输入验证码"/>
-		<span>${login_err}</span>
+		<input name="vcode" placeholder="请输入验证码" />
 		<img src="code" onclick="this.src='code?'+Math.random();"class="s1" title="点击更换">
+		<span>${login_err}</span>
 	</div>
 	<div>
 		<p class="error-message"></p>
-		<input type="submit" value="登录">
+		<input type="submit"  value="登录">
 	</div>
 	</form>
 </div>
- <c:if test="${msg != null }">
+ <c:if test="${msg!=null}">
 			<script type="text/javascript">
 			alert('${msg}');
 			</script>

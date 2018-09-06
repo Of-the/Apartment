@@ -101,6 +101,9 @@
     <servlet-name>LogisticalShowServlet</servlet-name>
     <url-pattern>/LogisticalUpdateServlet.do</url-pattern>
   </servlet-mapping>
+
+  
+  
   <servlet>
     <servlet-name>RectShowServlet</servlet-name>
     <servlet-class>com.practice2.servlet.RectShowServlet</servlet-class>
@@ -129,6 +132,12 @@
     <servlet-name>RectShowServlet</servlet-name>
     <url-pattern>/RectUpdateServlet.do</url-pattern>
   </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>RectShowServlet</servlet-name>
+    <url-pattern>/RectAddFroKey.do</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <servlet-name>RepairShowServlet</servlet-name>
     <servlet-class>com.practice2.servlet.RepairShowServlet</servlet-class>
@@ -157,6 +166,15 @@
     <servlet-name>RepairShowServlet</servlet-name>
     <url-pattern>/RepairUpdateServlet.do</url-pattern>
   </servlet-mapping>
+     <servlet-mapping>
+    <servlet-name>RepairShowServlet</servlet-name>
+    <url-pattern>/RepairAddFroKey.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
   <servlet>
     <servlet-name>ContractShowServlet</servlet-name>
     <servlet-class>com.practice2.servlet.ContractShowServlet</servlet-class>

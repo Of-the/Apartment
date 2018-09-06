@@ -7,7 +7,6 @@ public class User {
 	private String userPassword;
 	private String userPhone;
 	private String userAddress;
-	private int userStatus;
 	public int getUserId() {
 		return userId;
 	}
@@ -38,30 +37,14 @@ public class User {
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
 	}
-	public int getUserStatus() {
-		return userStatus;
-	}
-	public void setUserStatus(int userStatus) {
-		this.userStatus = userStatus;
-	}
+	
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", userName=" + userName + ", userPassword=" + userPassword + ", userPhone="
-				+ userPhone + ", userAddress=" + userAddress + ", userStatus=" + userStatus + "]";
+				+ userPhone + ", userAddress=" + userAddress + "]";
 	}
-	public User(int userId, String userName, String userPassword, String userPhone, String userAddress,
-			int userStatus) {
-		super();
-		this.userId = userId;
-		this.userName = userName;
-		this.userPassword = userPassword;
-		this.userPhone = userPhone;
-		this.userAddress = userAddress;
-		this.userStatus = userStatus;
-	}
-	public User() {
-		super();
-	}
+
+
 	
 	
 	

@@ -16,7 +16,7 @@
 	<h3>房租信息管理</h3>
 	<div class="actions">
 		<div>
-			<a class="btn btn-primary" href="view/Rect/rectAdd.jsp">添加信息</a>
+			<a class="btn btn-primary" href="/Apartment/RectAddFroKey.do">添加信息</a>
 		</div>
 	</div>
 	<table class="list" border="1">
@@ -40,10 +40,11 @@
 			<td>
 				<a class="fa fa-info" title="详情" href="RectDetailServlet.do?id=${i.rId}"></a>
 				&nbsp;&nbsp;
+				<c:if test='${user.userName =="admin"}'>
 				<a class="fa fa-pencil" title="编辑" href="RectUpdateServlet.do?id=${i.rId}"></a>
 				&nbsp;&nbsp;
 				<a class="fa fa-remove" title="删除" href="RectDeleteServlet.do?id=${i.rId}"
-				 onclick="return confirm('是否确认删除${i.getrId()}?');"></a>
+				 onclick="return confirm('是否确认删除${i.getrId()}?');"></a></c:if>
 			
 			</td>
 		</tr>

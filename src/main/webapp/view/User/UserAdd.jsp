@@ -15,12 +15,12 @@
 <form action="/Apartment/UserAddServlet.do">
 		<h2>添加</h2>
 			<table class="form-table">
-			<tr>
+	<!-- 		<tr>
 	<td>用户ID</td>
 	<td colspan="3" class="control">
-	<input type="text"  name="user_id" placeholder="用户ID">
+	<input type="text"  name="user_id"  placeholder="用户ID">
 	</td>
-	<tr>
+	<tr> -->
 	<tr>
 	<td>姓名</td>
 	<td colspan="3" class="control">

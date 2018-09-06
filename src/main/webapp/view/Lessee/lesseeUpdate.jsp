@@ -13,14 +13,14 @@
 <body>
 <div class="box">
 	<h3>修改房屋信息</h3>
-<form action="LesseeEditServlet">
+<form action="/Apartment/LesseeEditServlet.do">
 		<h2>修改</h2>
 
 			<table class="form-table">
 			<tr>
 			<td>租客号</td>
 			<td colspan="3" class="control">
-			<input type="text" name="l_id" placeholder="${lessee.lId}" readonly="readonly">
+			<input type="text" name="l_id" value="${lessee.lId}" placeholder="${lessee.lId}" readonly="readonly">
 			</td>
 			</tr> 
 			<tr>
@@ -31,13 +31,16 @@
 			<tr>
 			<td>号码</td>
 			<td colspan="3" class="control">
-			<input type="text" name="h_estate" placeholder="${lessee.lTel}"></td>
+			<input type="text" name="l_tel" placeholder="${lessee.lTel}"></td>
 			</tr>
 			<tr>
 			<td>性别</td>
 			<td colspan="3" class="control">
-			
-			<input type="text" name="h_unitNumber" placeholder="${lessee.lSex}"></td> 
+			<select name="l_sex" value="${lessee.lSex}">
+					<option value="男">男</option>
+					<option value="女">女</option>
+				</select> 
+			<%-- <input type="text" name="h_unitNumber" placeholder="${lessee.lSex}"></td>  --%>
 			</tr>
 			<tr>
 			<td>籍贯</td>
@@ -48,6 +51,11 @@
 			<td>身份证号</td>
 			<td colspan="3" class="control">
 			<input type="text" name="l_idcard" placeholder="${lessee.lIdcard}"></td>
+			</tr>
+			<tr>
+			<td>添加时间</td>
+			<td colspan="3" class="control">
+			<input type="date" name="l_addtime" placeholder="${lessee.lAddtime}"></td>
 			</tr>
 			<tr>
 			</table>	

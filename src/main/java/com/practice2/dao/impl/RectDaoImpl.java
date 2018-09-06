@@ -10,8 +10,8 @@ import com.practice2.util.JDBCUtil;
 public class RectDaoImpl implements RectDao{
 
 	public void add(Rect e) {
-		String sql="INSERT INTO Rect VALUES(?,?,?,?,now(),?)";
-		JDBCUtil.daDMLWithSQL(sql,e.getrId(), e.gethId(),e.getlId(),e.getrMoney(),e.getrRemark());
+		String sql="INSERT INTO Rect VALUES(?,?,?,?,?,?)";
+		JDBCUtil.daDMLWithSQL(sql,null, e.gethId(),e.getlId(),e.getrMoney(),e.getrTime(),e.getrRemark());
 
 	}
 

@@ -46,10 +46,11 @@
 			<td>
 				<a class="fa fa-info" title="详情" href="LesseeDetailServlet.do?id=${i.lId}"></a>
 				&nbsp;&nbsp;
+				<c:if test='${user.userName =="admin"}'>
 				<a class="fa fa-pencil" title="编辑" href="LesseeUpdateServlet.do?id=${i.lId}"></a>
 				&nbsp;&nbsp;
 				<a class="fa fa-remove" title="删除" href="LesseeDeleteServlet.do?id=${i.lId}" 
-				onclick="return confirm('是否确认删除${i.getlId()}?');"></a>
+				onclick="return confirm('是否确认删除${i.getlId()}?');"></a></c:if>
 			</td>
 		</tr>
 		</c:forEach>

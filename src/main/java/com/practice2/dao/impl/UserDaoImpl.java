@@ -14,8 +14,8 @@ import com.practice2.util.JDBCUtil;
 public class UserDaoImpl implements UserDao{
 
 	public void add(User e) {
-		String sql="insert into User values(?,?,?,?,?,?)";
-		JDBCUtil.daDMLWithSQL(sql,e.getUserId(), e.getUserName(),e.getUserPassword(),e.getUserPhone(),e.getUserAddress(),e.getUserStatus());
+		String sql="insert into User values(?,?,?,?,?)";
+		JDBCUtil.daDMLWithSQL(sql,null, e.getUserName(),e.getUserPassword(),e.getUserPhone(),e.getUserAddress());
 	}
 
 	public void deleteByID(int id) {
@@ -24,7 +24,7 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	public void update(User e) {
-		String sql="UPDATE User SET user_name=?,user_password=?,user_phone=?,user_address=?,user_status=? WHERE user_id=?";
+		String sql="UPDATE User SET user_name=?,user_password=?,user_phone=?,user_address=? WHERE user_id=?";
 		JDBCUtil.daDMLWithSQL(sql, e.getUserName(),e.getUserPassword(),e.getUserPhone(),e.getUserAddress(),e.getUserId());
 	}
 
@@ -57,20 +57,9 @@ public class UserDaoImpl implements UserDao{
 	
 	}
 
-	public int sum() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public List<User> selectAllByPage(int page, int count) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	public User updateByID(int id) {
 		String sql="select * from User where user_id=?";
 		return JDBCUtil.dbDQLWithSQL(sql, User.class, id).get(0);
-
 	}
 
 	public User findByUserName(String user_name) {

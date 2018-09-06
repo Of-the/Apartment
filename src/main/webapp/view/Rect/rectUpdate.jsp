@@ -18,38 +18,50 @@
 		<h2>修改</h2>
 			<table class="table-bordered">
 			<tr>
-			<td>序号</td>
-			<td><input type="text" name="r_id" value="${rect.rId}" readonly="readonly"></td>
+			<td >序号</td>
+			<td colspan="3" class="control"><input type="text" name="r_id" value="${rect.rId}" readonly="readonly"></td>
 			</tr>
 			<tr>
 			<td>房屋信息</td>
 			<!-- <td><input type="text" name="h_id"></td> -->
-			<td><select name="h_id">
+			<td colspan="3" class="control"><select name="h_id" >
 			<c:forEach var="i" items="${house}" >
-			<option value="${i.hId}">${i.hArea}</option>
+				<c:if test="${i.hId==rect.hId }">
+			<option value="${i.hId}" selected="selected"> ${i.hArea}</option>
+			</c:if>
+			<c:if test="${i.hId!=rect.hId }">
+			<option value="${i.hId}" > ${i.hArea}</option>
+			</c:if>
 			</c:forEach>
 			</select></td>
 			</tr>
 			<tr>
 			<td>租户信息</td>
 			<!-- <td><input type="text" name="l_id"></td> -->
-			<td><select name="l_id">
+			<td colspan="3" class="control">
+			<select name="l_id" >
 			<c:forEach var="i" items="${lessee}" >
-			<option value="${i.lId}">${i.lName}</option>
+			<c:if test="${i.lId==rect.lId }">
+			<option value="${i.lId}" selected="selected"> ${i.lName}</option>
+			</c:if>
+			<c:if test="${i.lId!=rect.lId }">
+			<option value="${i.lId}" > ${i.lName}</option>
+			</c:if>
 			</c:forEach>
 			</select></td>
 			</tr>
 			<tr>
 			<td>缴纳金额</td>
-			<td><input type="text" name="r_money" value="${rect.rMoney}"></td>
+			<td colspan="3" class="control"><input type="text" name="r_money" value="${rect.rMoney}"></td>
 			</tr>
 			<tr>
 			<td>缴纳时间</td>
-			<td><input type="text" name="r_time" value="${rect.rTime}"></td>
+			<td colspan="3" class="control">
+			<input type="date" name="r_time" value="${rect.rTime}"></td>
 			</tr>
 			<tr>
 			<td>备注</td>
-			<td><input type="text" name="r_remark" value="${rect.rRemark}"></td>
+			<td colspan="3" class="control"><input type="text" name="r_remark" value="${rect.rRemark}"></td>
 			</tr>
 			</table>	
 			<div class="buttons">

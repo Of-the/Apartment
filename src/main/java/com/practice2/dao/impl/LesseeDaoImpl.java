@@ -20,7 +20,7 @@ public class LesseeDaoImpl implements LesseeDao{
 	}
 
 	public void update(Lessee e) {
-		String sql="UPDATE lessee SET l_name=?,l_tel=?,l_sex=?,l_nativeplace=?,l_idcard=?,l_addtime=? WHERE l_id";
+		String sql="UPDATE lessee SET l_name=?,l_tel=?,l_sex=?,l_nativeplace=?,l_idcard=?,l_addtime=? WHERE l_id=?";
 		JDBCUtil.daDMLWithSQL(sql, e.getlName(),e.getlTel(),e.getlSex(),e.getlNativeplace(),e.getlIdcard(),e.getlAddtime(),e.getlId());
 	}
 
@@ -32,7 +32,7 @@ public class LesseeDaoImpl implements LesseeDao{
 
 	public Lessee updateByID(int id) {
 		String sql="select * from Lessee where l_id=?";
-		return (Lessee) JDBCUtil.dbDQLWithSQL(sql, Lessee.class, id);
+		return (Lessee) JDBCUtil.dbDQLWithSQL(sql, Lessee.class, id).get(0);
 	}
 
 
