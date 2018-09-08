@@ -31,6 +31,7 @@ public class ActivityDaoImpl implements ActivityDao{
 		return JDBCUtil.dbDQLWithSQL(sql, Activity.class);
 	}
 
+
 	public Activity updateByID(int id) {
 		String sql="select * from Activity where a_id=?";
 		return JDBCUtil.dbDQLWithSQL(sql, Activity.class, id).get(0);
