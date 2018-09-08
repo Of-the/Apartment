@@ -11,7 +11,7 @@ public class ContractDaoImpl implements ContractDao{
 
 	public void add(Contract e) {
 		String sql=" insert into Contract values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
-		JDBCUtil.daDMLWithSQL(sql, null,e.getcNumber(),e.gethId(),e.getlId(),e.getcTime(),e.getcStarttime(),e.getcEndtime(),e.getcMoney(),e.getcPay(),e.getcDeposit(),e.getcPeriods(),e.getcPeople(),e.getcStatus());
+		JDBCUtil.daDMLWithSQL(sql,null,e.getcNumber(),e.gethId(),e.getlId(),e.getcTime(),e.getcStarttime(),e.getcEndtime(),e.getcMoney(),e.getcPay(),e.getcDeposit(),e.getcPeriods(),e.getcPeople(),e.getcStatus());
 	}
 
 	public void deleteByID(int id) {
@@ -33,7 +33,4 @@ public class ContractDaoImpl implements ContractDao{
 		String sql="select * from Contract where c_id=?";
 		return JDBCUtil.dbDQLWithSQL(sql, Contract.class, id).get(0);
 	}
-
-
-
 }
